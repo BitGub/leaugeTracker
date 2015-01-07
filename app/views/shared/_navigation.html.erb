@@ -1,10 +1,15 @@
 <% if signed_in? %>
   <nav>
-    <%= link_to "Sign out", signout_path, method: :delete %>
+    <ul>
+      <li><%= link_to "Sign out", signout_path, method: :delete %></li>
+    </ul>
   </nav>
 <% else %>
   <nav>
-    <%= link_to "Sign in", signin_path %>
-    <%= link_to "Create new Account", new_user_path %>
+      <h1>League Tracker</h1>
+    <ul>
+      <li><%= link_to "Sign in", signin_path %></li>
+      <li><%= link_to "Create new Account", new_user_path %></li>
+    </ul>
   </nav>
 <% end %>

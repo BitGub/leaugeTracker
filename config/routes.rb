@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
-  match '/signin',  to: 'sessions#new',         via: 'get'
+  root    'welcome#index'
+  get     'signin'  => 'sessions#new'
+  post    'signin'  => 'sessions#create'
+  get     'signup'  => 'users#new'
+  delete  'signout' => 'sessions#destroy'
   
   resources :users
 

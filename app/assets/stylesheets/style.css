@@ -1,0 +1,90 @@
+body {
+  font-family: sans-serif;
+}
+
+.main-content {
+  padding: 1em;
+}
+
+form {
+  padding-top: 1.2em;
+  width:50%;
+  margin: 0 auto;
+}
+
+hr {
+  margin: 1em 0 1em 0;
+}
+
+h1,h2,h3,p {
+  line-height:1.5em;
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+#sign-in {
+  text-align:center;
+}
+
+h2 {
+  font-size: 2.2em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+p, li, a, input {
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  text-align:center;
+}
+
+nav ul li {
+  display:inline;
+  padding-right: 0.5em;
+  border-right: 2px solid #7facaa;
+}
+
+nav ul li:last-child {
+  border-right:0;
+}
+
+#error_explanation {
+  padding-bottom:2.5em;
+}
+
+#error_explanation li {
+  padding-bottom:2.5em;
+}
+
+#error_explanation li, .alert-error {
+  padding-bottom:0.5em;
+}
+
+#error_explanation .alert-error {
+  font-weight:bold;
+}
+
+label, input {
+  display:block;
+  width:100%;
+}
+
+label {
+  font-weight:bold;
+  margin-bottom: 0.5em;
+}
+
+input {
+  padding:0.3em;
+  margin-bottom: 1em;
+}

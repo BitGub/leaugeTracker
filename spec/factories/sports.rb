@@ -1,8 +1,9 @@
 FactoryGirl.define do
   factory :sport do
-    user_id 1
-name "MyString"
-description "MyString"
+    name "Foosball"
+    description "This is an International Foosball Cup"
+    
+    user
   end
 
 end

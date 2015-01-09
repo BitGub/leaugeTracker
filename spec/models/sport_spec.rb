@@ -12,7 +12,7 @@ RSpec.describe Sport, :type => :model do
     expect(@sport).not_to be_valid
   end
   
-  it "should belong to @user", :focus do
+  it "should belong to @user" do
     expect(@sport.user_id).to eq(@user.id)
   end
 end

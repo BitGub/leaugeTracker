@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   delete  'signout' => 'sessions#destroy'
   
   resources :users
+  resources :sports
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

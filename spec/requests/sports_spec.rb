@@ -6,25 +6,34 @@ RSpec.describe "Sports", :type => :request do
     @user = FactoryGirl.create(:user)
   end
   
-  describe " /sports/new " do
-    
-    before(:each) do
-      visit signin_path
-      fill_in 'Email', with: @user.email
-      fill_in 'Password', with: @user.password
-      click_button 'Sign in'
-    end
-    
+  before(:each) do
+    visit signin_path
+    fill_in 'Email', with: @user.email
+    fill_in 'Password', with: @user.password
+    click_button 'Sign in'
+  end
+  
+  describe "GET new" do
     context "with valid information" do
-      it "should have success message", :focus do
+      it "should have success message" do
         visit new_sport_path
         
         fill_in 'Name', with: 'Foosball'
         fill_in 'Description', with: 'This is the sport of Foosball'
         click_button 'Create Sport!'
         
-        expect(page).to have_css(".success") 
+        @sport = Sport.first
+        
+        expect(current_path).to eq sport_path(@sport) 
       end
     end
+  end
+  
+  describe "GET show" do
+    before(:each) do
+      @sport = FactoryGirl.create(:sport)
+    end
+    
+    it " "
   end
 end

@@ -89,6 +89,12 @@ a {
   line-height:1.5em;
 }
 
+.side_nav .nav_footer {
+  bottom: 0;
+  position:fixed;
+  padding-bottom:20px;
+}
+
 .side_nav .nav_footer ul {
   margin-bottom: 0;
 }

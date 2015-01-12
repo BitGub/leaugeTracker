@@ -1,6 +1,6 @@
 <%= form_for(@sport) do |f| %>
 <%= render partial: 'fields', locals: { f: f } %>
-<%= f.submit "Create Sport!" %>
+<%= f.submit "Update" %>
 <% end %>
 
-<%= link_to 'back to profile', user_path(current_user)%>
+<%= link_to 'back to sport', user_path(@sport)%>

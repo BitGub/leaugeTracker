@@ -2,3 +2,9 @@
   <h1><%= @sport.name %></h1>
   <h2><%= @sport.description unless blank? %></h2>
 </header>
+
+<div class="toolbar">
+  <%= link_to "+ Add a result" %>
+  <%= link_to "Invite a Player" %>
+  <%= link_to "Settings", edit_sport_path(@sport) %>
+</div>

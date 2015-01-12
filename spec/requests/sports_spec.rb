@@ -36,4 +36,21 @@ RSpec.describe "Sports", :type => :request do
     
     it " "
   end
+  
+  describe "GET Edit" do
+    before(:each) do
+      @sport = FactoryGirl.create(:sport)
+      visit edit_sport_path(@sport)
+    end
+    
+    context "with vaild information" do
+      it "updates sports name", :focus do
+        fill_in "Name", with: "Sports renamed title"
+        click_button "Update"
+        
+        
+        expect(page).to have_css('h1', text: "Sports renamed title")
+      end
+    end
+  end
 end

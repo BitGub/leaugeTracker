@@ -22,6 +22,20 @@ class SportsController < ApplicationController
     @sport = Sport.find(params[:id])
   end
   
+  def edit
+    @sport = Sport.find(params[:id])
+  end
+  
+  def update
+    @sport = Sport.find(params[:id])
+    if @sport.update_attributes(sport_params)
+      flash[:success] = "Sport Information successfully updated!"
+      redirect_to @sport
+    else
+      render 'edit'
+    end
+  end
+  
   private
   
     def sport_params

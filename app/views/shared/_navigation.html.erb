@@ -1,11 +1,31 @@
 <% if signed_in? %>
-  <nav>
-    <ul>
-      <li><%= link_to "Sign out", signout_path, method: :delete %></li>
-    </ul>
+  <nav class="side_nav">
+    <div class="nav-profile">
+      <ul>
+        <li class="current_player">
+          <img></img>
+          <h3><%= current_user.name %></h3>
+          <a><%= link_to "Edit Profile", edit_user_path(current_user)%> </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav_sports">
+      <ul>
+        <% current_user.sports.each do |sport|%>
+        <li><%= link_to sport.name, sport_path(sport) unless blank? %></li>
+        <% end %>
+        <li><%= link_to "Create New Sport", new_sport_path %></li>
+      </ul>
+    </div>
+    
+    <div class="nav_footer">
+      <ul>
+        <li><%= link_to "Sign out", signout_path, method: :delete %></li>
+      </ul>
+    </div>
   </nav>
 <% else %>
-  <nav>
+  <nav class="top_nav">
       <h1>League Tracker</h1>
     <ul>
       <li><%= link_to "Sign in", signin_path %></li>

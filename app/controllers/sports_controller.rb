@@ -9,6 +9,7 @@ class SportsController < ApplicationController
   
   def create
     @sport = Sport.new(sport_params)
+    @sport.user_id = current_user.id
     if @sport.save
       flash[:success] = "You have now created your sport!"
       redirect_to @sport

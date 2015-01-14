@@ -32,7 +32,7 @@
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
 
-guard :rspec, cmd: "bundle exec spring rspec" do
+guard :rspec, cmd: "spring rspec spec" do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 
@@ -75,12 +75,3 @@ guard :rspec, cmd: "bundle exec spring rspec" do
     Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
   end
 end
-
-# guard :rspec_env => { 'RAILS_ENV' => 'test' } do
-#   watch('config/application.rb')
-#   watch('config/environment.rb')
-#   watch('config/environments/test.rb')
-#   watch(%r{^config/initializers/.+\.rb$})
-#   watch('Gemfile.lock')
-#   watch('spec/spec_helper.rb') { :rspec }
-# end

@@ -37,6 +37,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
   gem 'guard-rspec'
+  gem 'guard-spring'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'database_cleaner'

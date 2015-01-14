@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   layout 'signup', only: [:new]
+  before_action :signed_in_user, only: [:edit, :update, :destroy]
    
   def new
     @user = User.new

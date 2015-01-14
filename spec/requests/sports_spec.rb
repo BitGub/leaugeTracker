@@ -44,7 +44,7 @@ RSpec.describe "Sports", :type => :request do
     end
     
     context "with vaild information" do
-      it "updates sports name", :focus do
+      it "updates sports name" do
         fill_in "Name", with: "Sports renamed title"
         click_button "Update"
         

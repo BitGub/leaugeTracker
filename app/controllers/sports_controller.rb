@@ -1,4 +1,5 @@
 class SportsController < ApplicationController
+  before_action :signed_in_user, execpt: [:show]
   
   def index
   end

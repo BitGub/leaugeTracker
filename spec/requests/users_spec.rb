@@ -15,7 +15,7 @@ RSpec.describe "Users", :type => :request do
 
   describe "GET show" do
     context "side navigation" do
-      it "users should only see sports created by them", :focus do
+      it "users should only see sports created by them" do
         visit user_path(user)
 
         within("//*[@id='PageContainer']/nav/div[2]") do
@@ -23,7 +23,7 @@ RSpec.describe "Users", :type => :request do
         end
       end
       
-      it "user should not see sports not created by them", :focus do
+      it "user should not see sports not created by them" do
           click_link "Sign out"
           visit signin_path
           fill_in 'Email', with: user2.email
